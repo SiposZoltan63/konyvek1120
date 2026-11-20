@@ -11,7 +11,7 @@
             <ColumnDefinition Width="1*"/>
             <ColumnDefinition Width="1.5*"/>
         </Grid.ColumnDefinitions>
-        <DataGrid Grid.Column="1" x:Name="dGrid" d:ItemsSource="{d:SampleData ItemCount=5}" SelectionChanged="Kattintas"/>
+        <DataGrid Grid.Column="1" x:Name="dGrid" d:ItemsSource="{d:SampleData ItemCount=5}"/>
         <StackPanel Orientation="Vertical">
             <Button Content="Könyvek betöltése" Height="25px" Width="250" Margin="10px" Click="konyvekbetoltese"/>
             <Button Content="Hány Könyv Van?" Height="25px" Width="250" Margin="10px" Click="konyvekszama"/>
@@ -19,8 +19,8 @@
             <Button Content="Átlag értékelés" Height="25px" Width="250" Margin="10px" Click="Atlag"/>
             <Button Content="Csak elérhető könyvek" Height="25px" Width="250" Margin="10px" Click="elerhetokonyvek"/>
             <Button Content="Csak címek" Height="25px" Width="250" Margin="10px" Click="csakcim"/>
-            <Button Content="Rendezés cím szerint" Height="25px" Width="250" Margin="10px" Click="rendezescimszerint"/>
-            <ProgressBar Height="25px" Margin="10" Width="250" Value="25" x:Name="progressbar"/>
+            <Button Content="Rendezés szerző szerint" Height="25px" Width="250" Margin="10px" Click="rendezesszerzoszerint"/>
+            <ProgressBar Height="25px" Margin="10" Width="250" Value="25" Minimum="0" Maximum="100" x:Name="progressbar"/>
         </StackPanel>
     </Grid>
 </Window>

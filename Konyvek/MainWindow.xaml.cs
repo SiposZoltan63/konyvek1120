@@ -69,5 +69,28 @@ namespace Konyvek
             }
             dGrid.ItemsSource = CsakElerheto;
         }
+
+        private void csakcim(object sender, RoutedEventArgs e)
+        {
+            List<Cim> konyvcimek = new List<Cim>();
+            foreach (var item in konyvek)
+            {
+                Cim c = new Cim(item.cim);
+                konyvcimek.Add(c);
+                dGrid.ItemsSource = konyvcimek;
+            }
+        }
+
+        private void rendezesszerzoszerint(object sender, RoutedEventArgs e)
+        {
+            List<Konyvek> rendezett = konyvek.OrderBy(k => k.szerzo).ToList();
+            dGrid.ItemsSource = rendezett;
+
+        }
+
+        private void progressbar_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+
+        }
     }
 }
