@@ -87,10 +87,17 @@ namespace Konyvek
             dGrid.ItemsSource = rendezett;
 
         }
-
-        private void progressbar_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        private void selectedchange(object sender, SelectionChangedEventArgs e)
         {
+            if (dGrid.SelectedItem is Konyvek)
+            {
+                progressbar.Value = ((Konyvek)dGrid.SelectedItem).oldalszam;
 
+            }
+            else 
+            {
+                MessageBox.Show($"A kiválasztott nem könyv");
+            }
         }
     }
 }
