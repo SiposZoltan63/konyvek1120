@@ -1,0 +1,26 @@
+﻿<Window x:Class="Konyvek.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Konyvek"
+        mc:Ignorable="d"
+        Title="Könyvek" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1.5*"/>
+        </Grid.ColumnDefinitions>
+        <DataGrid Grid.Column="1" x:Name="dGrid" d:ItemsSource="{d:SampleData ItemCount=5}" SelectionChanged="Kattintas"/>
+        <StackPanel Orientation="Vertical">
+            <Button Content="Könyvek betöltése" Height="25px" Width="250" Margin="10px" Click="konyvekbetoltese"/>
+            <Button Content="Hány Könyv Van?" Height="25px" Width="250" Margin="10px" Click="konyvekszama"/>
+            <Button Content="Leghosszabb Könyv?" Height="25px" Width="250" Margin="10px" Click="konyvhossz"/>
+            <Button Content="Átlag értékelés" Height="25px" Width="250" Margin="10px" Click="Atlag"/>
+            <Button Content="Csak elérhető könyvek" Height="25px" Width="250" Margin="10px" Click="elerhetokonyvek"/>
+            <Button Content="Csak címek" Height="25px" Width="250" Margin="10px" Click="csakcim"/>
+            <Button Content="Rendezés cím szerint" Height="25px" Width="250" Margin="10px" Click="rendezescimszerint"/>
+            <ProgressBar Height="25px" Margin="10" Width="250" Value="25" x:Name="progressbar"/>
+        </StackPanel>
+    </Grid>
+</Window>
